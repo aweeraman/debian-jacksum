@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+  
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/ant.mk
+
+PACKAGE_VERSION := $(shell dpkg-parsechangelog | sed -n 's/^Version: \(.*\)-[^-]*$$/\1/p')
+
+DEB_SRCDIR = $(CURDIR)/src
+
+JAVA_HOME := /usr/lib/jvm/java-gcj
+ANT_HOME := /usr/share/ant
+
+install/jacksum:: DEB_FINALDIR=$(CURDIR)/debian/jacksum
+install/jacksum::
+	install -m 644 -D src/jacksum.jar $(DEB_FINALDIR)/usr/share/java/jacksum-$(PACKAGE_VERSION).jar
+	dh_link /usr/share/java/jacksum-$(PACKAGE_VERSION).jar /usr/share/java/jacksum.jar
+	install -m 555 -D unix/jacksum $(DEB_FINALDIR)/usr/bin/jacksum
+
+clean::
+	rm -rf src
+
+makebuilddir::
+	[ -e $(CURDIR)/src/jacksum.jar ] || unzip -d $(CURDIR)/src $(CURDIR)/source/jacksum-src.zip

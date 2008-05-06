@@ -1,0 +1,11 @@
+jacksum (1.7.0-2) unstable; urgency=low
+
+  * Improved man page.
+
+ -- Anuradha Weeraman (anu) <aweeraman@gmail.com>  Tue, 06 May 2008 17:28:11 -0400
+
+jacksum (1.7.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #474640)
+
+ -- Anuradha Weeraman (anu) <aweeraman@gmail.com>  Sun, 06 Apr 2008 15:28:45 -0400

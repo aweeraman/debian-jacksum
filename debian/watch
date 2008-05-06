@@ -1,0 +1,4 @@
+version=3
+
+http://sf.net/jacksum/jacksum-([\d\.]*)\.zip \
+	debian debian/get-orig.sh

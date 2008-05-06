@@ -1,0 +1,103 @@
+This package was debianized by Anuradha Weeraman <aweeraman@gmail.com> on
+Sun, 06 Apr 2008 15:28:45 -0400.
+
+It was downloaded from http://www.jonelo.de/java/jacksum/
+
+Upstream Author: 
+
+	Dipl.-Inf. (FH) Johann Nepomuk Loefflmann <jonelo@jonelo.de>
+
+Copyrights: 
+
+	Copyright (C) 2002-2006 Dipl.-Inf. (FH) Johann N. Loefflmann
+    Copyright (C) 2001-2006 Dipl.-Inf. (FH) Johann Nepomuk Loefflmann
+    Copyright (C) 2000-2005 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
+    Copyright (C) 2000, 2001, 2002, 2003 Josh Coalson
+    Copyright (C) 2000, 2001 Markus Friedl 
+    GNU Crypto: Copyright (C) 2001, 2002, 2003 Free Software Foundation, Inc.
+
+Licenses:
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License with
+    the Debian GNU/Linux distribution in file /usr/share/common-licenses/GPL;
+    if not, write to the Free Software Foundation, Inc., 51 Franklin Street,
+    Fifth Floor, Boston, MA 02110-1301  USA
+
+Portions of this software (GNU crypto) are licensed under GPL + Classpath exception:
+
+    The software in this package is distributed under the GNU General Public
+    License (with "Library Exception" described below).
+
+    A copy of GNU General Public License (GPL) is included in this distribution,
+    in the file COPYING.  If you do not have the source code, it is available at:
+
+       http://www.gnu.org/software/classpathx/crypto
+
+    In addition, the files distributed under GPL include the following special
+    exception:
+
+    As a special exception, if you link this library with other files to
+    produce an executable, this library does not by itself cause the
+    resulting executable to be covered by the GNU General Public License.
+    This exception does not however invalidate any other reasons why the
+    executable file might be covered by the GNU General Public License.
+
+    As such, this software can be used to run Free as well as proprietary
+    applications and applets: static linking is permitted, so this can even be
+    used in embedded configurations.
+
+Portions of this software are licensed under the MIT/X11 license:
+
+    Copyright (c) 2000-2005 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+    associated documentation files (the "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+    following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial
+    portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+    LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+    EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+    IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+    THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Portions of this software are licensed under the BSD license:
+
+	Copyright (c) 2000, 2001 Markus Friedl.  All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+     1. Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+     2. Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+    IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+    IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+    NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+    THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The Debian packaging is (C) 2008, Anuradha Weeraman <aweeraman@gmail.com> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
