@@ -1,23 +1,58 @@
 #!/usr/bin/make -f
-  
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/ant.mk
 
-PACKAGE_VERSION := $(shell dpkg-parsechangelog | sed -n 's/^Version: \(.*\)-[^-]*$$/\1/p')
+VER=$(shell dpkg-parsechangelog | sed -n 's/^Version: \(.*\)-[^-]*$$/\1/p')
 
-DEB_SRCDIR = $(CURDIR)/src
+JAVA_HOME=/usr/lib/jvm/default-java
+ANT_HOME=/usr/share/ant
 
-JAVA_HOME := /usr/lib/jvm/java-gcj
-ANT_HOME := /usr/share/ant
+JH_BUILD_SRC=$(CURDIR)/src
 
-install/jacksum:: DEB_FINALDIR=$(CURDIR)/debian/jacksum
-install/jacksum::
-	install -m 644 -D src/jacksum.jar $(DEB_FINALDIR)/usr/share/java/jacksum-$(PACKAGE_VERSION).jar
-	dh_link /usr/share/java/jacksum-$(PACKAGE_VERSION).jar /usr/share/java/jacksum.jar
-	install -m 555 -D unix/jacksum $(DEB_FINALDIR)/usr/bin/jacksum
+build: build-arch build-indep
 
-clean::
-	rm -rf src
+build-arch: build-stamp
 
-makebuilddir::
-	[ -e $(CURDIR)/src/jacksum.jar ] || unzip -d $(CURDIR)/src $(CURDIR)/source/jacksum-src.zip
+build-indep: build-stamp
+
+build-stamp:
+	dh_testdir
+	unzip $(CURDIR)/source/jacksum-src.zip -d $(JH_BUILD_SRC)
+	jh_build -mjonelo.jacksum.cli.Jacksum jacksum-$(VER).jar $(JH_BUILD_SRC)
+	touch $@
+
+binary: binary-indep binary-arch
+	dh_testdir
+	dh_prep
+	dh_install
+	dh_installdocs
+	dh_installchangelogs
+	dh_installman
+	jh_manifest
+	dh_link
+	jh_exec
+	jh_depends
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch: build install
+
+binary-indep: build install
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+clean:
+	dh_testdir
+	jh_build --clean
+	dh_clean
+	-@[ -e build-stamp ] && rm -f build-stamp
+	-@[ -e src ] && rm -rf src
+	-@[ -e jacksum-$(VER).jar ] && rm jacksum-$(VER).jar
+	-@[ -e debian/jh_build_stamp ] && rm debian/jh_build_stamp
+	-@[ -e debian/stamp-ant-build ] && rm debian/stamp-ant-build

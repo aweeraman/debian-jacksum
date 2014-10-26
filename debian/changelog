@@ -1,3 +1,9 @@
+jacksum (1.7.0-3) unstable; urgency=low
+
+  * Updated build scripts, fixed warnings
+
+ -- Anuradha Weeraman (anu) <aweeraman@gmail.com>  Sun, 26 Oct 2014 11:06:53 +0530
+
 jacksum (1.7.0-2) unstable; urgency=low
 
   * Improved man page.
