@@ -1,0 +1,35 @@
+--- src/jonelo/jacksum/cli/Jacksum.java	2006-07-29 00:17:00.000000000 +0200
++++ src/jonelo/jacksum/cli/Jacksum_patch.java	2009-08-20 19:41:08.000000000 +0200
+@@ -983,20 +983,23 @@
+                     _t=false;
+                     checksum.setTimestampFormat(null);
+                 }
+-                checksum.setFilename("");
+-                String s=null;
++                checksum.setFilename("-");
++                int i=0;
+                 BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
++                StringBuffer sb=new StringBuffer(1000001);
+                 try {
+                     do {
+-                        s=in.readLine();
+-                        if (s!=null) {
++                        i=in.read();
++                        if (i > -1) {
+                             // better than s=s+"\n";
+-                            StringBuffer sb=new StringBuffer(s.length()+1);
+-                            sb.insert(0,s);
+-                            sb.insert(s.length(),'\n');
+-                            checksum.update(sb.toString().getBytes());
++                        	sb.append((char) i);
++                        	if (sb.length() > 1000000) { //process System.in in chunks
++                        		checksum.update(sb.toString().getBytes());
++                        		sb=new StringBuffer(1000001);
++                        	}
+                         }
+-                    } while (s!=null);
++                    } while (i > -1);
++                    checksum.update(sb.toString().getBytes());
+                     summary.addBytes(checksum.getLength());
+                     if (_e) expectation(checksum,expected);
+                     else System.out.println(checksum.toString());

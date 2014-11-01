@@ -1,3 +1,9 @@
+jacksum (1.7.0-4) unstable; urgency=low
+
+  * Applied patch by Ralph Plawetzki (Closes: #514299, #555688)
+
+ -- Anuradha Weeraman (anu) <aweeraman@gmail.com>  Sat, 01 Nov 2014 18:21:52 +0530
+
 jacksum (1.7.0-3) unstable; urgency=low
 
   * Updated build scripts, fixed warnings
