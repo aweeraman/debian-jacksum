@@ -1,3 +1,10 @@
+jacksum (1.7.0-4.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Invoke dh_strip_nondeterminism to make the package reproducible
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 12 Sep 2019 13:27:06 +0200
+
 jacksum (1.7.0-4.1) unstable; urgency=medium
 
   * Non-maintainer upload.

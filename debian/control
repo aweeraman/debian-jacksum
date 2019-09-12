@@ -2,7 +2,7 @@ Source: jacksum
 Section: utils
 Priority: extra
 Maintainer: Anuradha Weeraman (anu) <aweeraman@gmail.com>
-Build-Depends: debhelper (>= 9), unzip, wget
+Build-Depends: debhelper (>= 9), unzip, wget, dh-strip-nondeterminism
 Build-Depends-Indep: default-jdk, ant, javahelper
 Standards-Version: 3.9.6
 Homepage: http://www.jonelo.de/java/jacksum/
