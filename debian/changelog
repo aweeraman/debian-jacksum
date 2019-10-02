@@ -1,3 +1,9 @@
+jacksum (1.7.0-6) unstable; urgency=low
+
+  * Source-only build 
+
+ -- Anuradha Weeraman <aweeraman@gmail.com>  Wed, 02 Oct 2019 09:00:34 -0400
+
 jacksum (1.7.0-5) unstable; urgency=low
 
   * Updated the Standards-Version
