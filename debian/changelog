@@ -1,3 +1,11 @@
+jacksum (1.7.0-7) unstable; urgency=low
+
+  * Bumped up standards version
+  * Fixed typos in man page
+  * Added VCS-* entries
+
+ -- Anuradha Weeraman <aweeraman@gmail.com>  Fri, 22 Nov 2019 20:41:15 -0500
+
 jacksum (1.7.0-6) unstable; urgency=low
 
   * Source-only build 

@@ -4,8 +4,10 @@ Priority: optional
 Maintainer: Anuradha Weeraman <aweeraman@gmail.com>
 Build-Depends: debhelper (>= 9), unzip, wget, dh-strip-nondeterminism
 Build-Depends-Indep: default-jdk, ant, javahelper
-Standards-Version: 4.4.0
+Standards-Version: 4.4.1
 Homepage: http://www.jonelo.de/java/jacksum/
+Vcs-Git: https://salsa.debian.org/debian/jacksum.git
+Vcs-Browser: https://salsa.debian.org/debian/jacksum
 
 Package: jacksum
 Architecture: all
