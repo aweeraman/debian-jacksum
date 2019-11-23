@@ -18,6 +18,7 @@ build-stamp:
 	unzip $(CURDIR)/source/jacksum-src.zip -d $(JH_BUILD_SRC)
 	patch -p0 < debian/patches/01_newline.patch
 	jh_build -mjonelo.jacksum.cli.Jacksum jacksum-$(VER).jar $(JH_BUILD_SRC)
+	jar uf jacksum-$(VER).jar -C $(JH_BUILD_SRC) help
 	touch $@
 
 binary: binary-indep binary-arch

@@ -3,6 +3,7 @@ jacksum (1.7.0-7) unstable; urgency=low
   * Bumped up standards version
   * Fixed typos in man page
   * Added VCS-* entries
+  * Fix error message when running jacksum -h (Closes: #866755)
 
  -- Anuradha Weeraman <aweeraman@gmail.com>  Fri, 22 Nov 2019 20:41:15 -0500
 
